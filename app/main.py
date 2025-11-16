@@ -1,5 +1,7 @@
 from fastapi import FastAPI, File, UploadFile, HTTPException, Form
-from .schemas import OpenAIClient, Extractor, SummaryResponse
+from .schemas import SummaryResponse
+from .utils.extractor import Extractor
+from .utils.ai_client import OpenAIClient 
 from .config import MODEL, MAX_FILE_SIZE
 
 app = FastAPI()
